@@ -15,7 +15,7 @@ export default function Comments( {commentsList} ) {
         <div className="reviews">
           <div className="reviews__item">
             <h3>Последние отзывы</h3>
-            <a className="all-reviews" href="https://google.com">Все отзывы</a>
+            <a className="all-reviews" href="javascript:void(0)">Все отзывы</a>
           </div>
 
           <div className="reviews__item">
