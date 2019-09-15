@@ -1,0 +1,45 @@
+
+@media only screen and (max-width: 500px) {
+
+  .reviews {
+    font-size: 14px;
+  }
+
+  .reviews__item:first-child {
+    display: block;
+  }
+
+
+  .all-reviews {
+    margin: 0;
+  }
+
+  .list__item {
+    font-size: 14px;
+  }
+
+  .comment-info {
+    width: 130px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  
+  .reviews {
+    font-size: 12px;
+  }
+
+  .user {
+    font-size: 12px;
+  }
+
+  .comment-info {
+    width: 120px;
+    font-size: 10px;
+  }
+
+  .comment {
+    padding: 10px;
+}
+}

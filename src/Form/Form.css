@@ -1,0 +1,45 @@
+
+.form-box {
+    background: #f2f2f2;
+    padding: 30px 20px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message {
+    width: 100%;
+    height: 65px; 
+    resize: none; 
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    width: 281px;
+    height: 42px;
+    border-radius: 50px;
+    border: none;
+    background: #fddd5b;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffd631;
+}
+
+.btn:active {
+    background: #f2f2f2;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.1rem rgba(76,91,106,.5);
+}
+
