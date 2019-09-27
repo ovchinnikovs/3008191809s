@@ -2,47 +2,44 @@
 .content-box {
   display: flex;
   flex-direction: column;
-  height: 355px;
   padding: 0 20px;
 }
 
-.photo-wrapper {
-  display: block;
-  border-radius: 50%;
-  z-index: 3;
+.user-profile {
+  margin-top: 20px;
+  display: flex;
 }
 
-.photo-wrapper-image {
+.user-profile__photo {
   border-radius: 50%;
   width: 120px;
   height: 120px;
 }
 
-.user-profile {
-  position: relative;
-  margin-top: 20px;
-  display: flex;
-}
-
-.profile-data {
+.user-profile__data-wrapper {
   width: 100%;
-  margin: 5px 0 0 10px;
-  z-index: 2;
 }
 
-.user-name {
+.user-profile__data {
+  margin: 5px 0 0 10px;
+}
+
+.user-profile__name {
   font-size: 18px;
   margin: 0;
 }
 
-.specialty {
+.user-profile__specialty {
   color: #808080;
   font-size: 14px;
 }
 
-.subtitle,
-.subtitle-mobile {
+.user-profile__inner {
   margin-top: 10px;
+}
+
+.user-profile__subtitle,
+.user-profile__subtitle-mobile {
   height: 50px;
   display: flex;
   align-items: center;
@@ -50,7 +47,7 @@
   font-size: 15px;
 }
 
-.subtitle::before {
+.user-profile__subtitle::before {
   content: '';
   position: absolute;
   right: 0;
@@ -62,11 +59,7 @@
   border-radius: 5px;
 }
 
-.subtitle div {
-  margin-right: 10px;
-}
-
-.subtitle-mobile {
+.user-profile__subtitle-mobile {
   display: none;
   background: #fffbc8;
   border: 1px solid #cecabf;
@@ -80,17 +73,15 @@
   text-align: end;
 }
 
-.services span {
+.services__info {
   margin-right: 33px;
 }
 
-.rating {
-  text-align: left;
-  line-height: 30px;
+.services__rating {
   border-top: 1px solid #cecabf;
-  padding-top: 15px;
   border-bottom: 1px solid #cecabf;
-  padding-bottom: 15px;
+  line-height: 30px;
+  padding: 15px 0;
   margin: 15px 0;
 }
 
@@ -101,7 +92,7 @@
   margin-bottom: 2px;
 }
 
-.rating__item_before_light_green::before {
+.before_light-green::before {
   content: '';
   position: absolute;
   background: #b1e19b;
@@ -111,7 +102,7 @@
   border-radius: 0 5px 5px 0;
 }
 
-.rating__item_before_blue::before {
+.before_blue::before {
   content: '';
   position: absolute;
   background: #ace2f8;
@@ -122,7 +113,7 @@
   border-radius: 0 5px 5px 0;
 }
 
-.rating__item_before_blue:last-child::before {
+.before_blue:last-child::before {
   width: 11%;
 }
 
@@ -136,12 +127,12 @@
   margin-right: 44px;
 }
 
-.total-amount {
+.services__total-amount {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
 }
 
-.total-amount__item:last-child {
+.all {
   margin-right: 44px;
 }

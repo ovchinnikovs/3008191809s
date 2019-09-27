@@ -1,11 +1,11 @@
 import React from 'react';
-import './Comments.css';
-import './Comments-media.css';
+import './CommentsList.css';
+import './CommentsList-media.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-export default function Comments( {commentsList} ) {
+export default function CommentsList( {commentsList} ) {
 
   const newCommentsList = commentsList.filter((_item, index) => index >= commentsList.length - 3);
 
@@ -15,7 +15,7 @@ export default function Comments( {commentsList} ) {
         <div className="reviews">
           <div className="reviews__item">
             <h3>Последние отзывы</h3>
-            <a className="all-reviews" href="javascript:void(0)">Все отзывы</a>
+            <a className="all-reviews" href="https://google.com">Все отзывы</a>
           </div>
 
           <div className="reviews__item">

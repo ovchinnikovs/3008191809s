@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
+import '../App/App.css';
 import './Form.css';
 import './Form-media.css';
 
-import Comments from '../Comments/index';
+import CommentsList from '../CommentsList/index';
 
 
 export default function Form() {
@@ -11,13 +11,15 @@ export default function Form() {
     const [commentsList, setCommentsList] = useState([]);
     const [commentId, setCommentId] = useState(0);
 
-    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-    const date = new Date();
-    const day = date.getDate();
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-    const hour = date.getHours();
-    const minute = date.getMinutes().toString();
+    const dateTime = new Intl.DateTimeFormat('ru',
+        {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric'
+        }
+    ).format(new Date()).split(',');;
 
 
     const handleChangeValue = ({ target }) => {
@@ -25,10 +27,9 @@ export default function Form() {
     }
 
     function keyDownHandler(event) {
-        if (event.key === "Enter" && event.ctrlKey && value.trim() !== '') {
+        if (event.key === "Enter" && event.ctrlKey && event.target.tagName === 'TEXTAREA') {
             handleChange();
         }
-        return
     }
 
     function handleChange() {
@@ -38,8 +39,8 @@ export default function Form() {
                     value: value,
                     id: commentId,
                     name: 'Лилия',
-                    date: `${day} ${month} ${year}`,
-                    time: `${hour}:${minute.length === 1 ? '0' + minute : minute}`
+                    date: dateTime[0],
+                    time: dateTime[1]
                 }
             ]);
             setValue('');
@@ -49,12 +50,12 @@ export default function Form() {
 
     useEffect(() => {
         document.addEventListener('keydown', keyDownHandler);
-        return () => {document.removeEventListener('keydown', keyDownHandler);}
+        return () => { document.removeEventListener('keydown', keyDownHandler); }
     });
-    
+
     return (
         <>
-            <Comments commentsList={commentsList} />
+            <CommentsList commentsList={commentsList} />
 
             <section className="form-box">
                 <form action="#" className="form">

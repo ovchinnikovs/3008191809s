@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import './media.css';
+import './App-media.css';
 
-import Profile from '../src/Profile/index';
-import Form from '../src/Form/index';
+import Profile from '../Profile/index';
+import Form from '../Form/index';
 
 function App() {
   return (

@@ -1,24 +1,21 @@
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 
-  .subtitle {
+  .user-profile__subtitle {
     font-size: 13px;
   }
 
-  .services span {
+  .services__info {
     font-size: 14px;
   }
 
-  .rating {
-    font-size: 12px;
-  }
-
-  .total-amount {
+  .services__rating,
+  .services__total-amount {
     font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 454px) {
+@media only screen and (max-width: 576px) {
   
   .content-box {
     height: 100%;
@@ -32,39 +29,39 @@
     flex-wrap: wrap;
   }
 
-  .photo-wrapper {
+  .user-profile__photo-wrapper {
     height: 80px;
   }
 
-  .photo-wrapper-image {
+  .user-profile__photo {
     width: 80px;
     height: 80px;
   }
 
-  .profile-data {
+  .user-profile__data-wrapper {
     width: auto;
-}
+  }
 
-  .user-name {
+  .user-profile__name {
     font-size: 16px;
     line-height: 17px;
   }
 
-  .specialty {
+  .user-profile__specialty {
     font-size: 12px;
   }
 
-  .subtitle {
+  .user-profile__inner {
     display: none;
   }
 
-  .subtitle-mobile {
+  .user-profile__subtitle-mobile {
     display: flex;
     height: auto;
     margin: 0;
   }
 
-  .subtitle-mobile div {
+  .user-profile__text {
     margin: 0 10px;
   }
 
@@ -72,7 +69,7 @@
     width: 100%;
   }
 
-  .services span {
+  .services__info {
     margin-right: 20px;
   }
 
@@ -80,19 +77,7 @@
     margin-right: 30px;
   }
 
-  .total-amount__item:last-child {
+  .all {
     margin-right: 30px;
   }
-}
-
-@media only screen and (max-width: 414px) {
-
-  .subtitle-mobile {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  
-
 }
